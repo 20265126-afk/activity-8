@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balboa Creatives</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .contact-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 900px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      text-align: left;
+    }
+
+    .contact-left h1 {
+      font-size: 2.2rem;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .contact-tagline {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #50ace0;
+      margin-bottom: 20px;
+    }
+
+    .contact-description, .info-block {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4a4a4a;
+      margin-bottom: 20px;
+    }
+
+    .info-block h3 {
+      color: #1a1a1a;
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #2b3a29;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #dddddd;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid #50ace0;
+    }
+
+    .contact-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .send-btn {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .send-btn:hover {
+      background-color: #ffd700;
+      color: #1a1a1a;
+    }
+
+    nav a.active {
+      border-bottom: 2px solid #50ace0;
+      padding-bottom: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-card {
+        grid-template-columns: 1fr;
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand-container">
+      <img src="logo.png" alt="Balboa Creatives Logo" class="brand-logo">
+      <div class="brand-name">BALBOA CREATIVES</div>
+    </div>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-card">
+      
+      <!-- Left Column: Contact Details & Socials -->
+      <div class="contact-left">
+        <h1>GET IN TOUCH</h1>
+        <p class="contact-tagline">Let's Connect and Create Something Amazing</p>
+        <p class="contact-description">
+          Have a question, project idea, or collaboration in mind? Feel free to reach out through the form or my direct details below.
+        </p>
+
+        <div class="info-block">
+          <h3>Email</h3>
+          <p><a href="mailto:vlademirbalboa@gmail.com" style="color: #1685bb; text-decoration: none;">vlademirbalboa@gmail.com</a></p>
+        </div>
+
+        <div class="info-block">
+          <h3>Studio Address</h3>
+          <p>Baguio City, Benguet, Philippines</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Business Hours</h3>
+          <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Socials</h3>
+          <p>
+            <a href="https://www.facebook.com/vladimir.balboa.560" target="_blank" style="color: #1685bb; text-decoration: none; margin-right: 15px;">vlademir balboa</a>
+            <a href="https://www.instagram.com/vlad_blb/" target="_blank" style="color: #1685bb; text-decoration: none;">vlad_blb</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Column: Message Form -->
+      <div class="contact-right">
+        <form class="contact-form" action="mailto:vlademirbalboa@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="Email" placeholder="Enter your email address" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" placeholder="Write your message here..." required></textarea>
+
+          <button type="submit" class="send-btn">SEND MESSAGE</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Balboa Creatives | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
